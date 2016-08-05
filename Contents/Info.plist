@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleIdentifier</key>
-	<string>com.apple.ScriptEditor.id.F06A196D-8986-4805-9596-3DB8DEC844B5</string>
+	<string>net.script-factory.HTMLElement</string>
 	<key>WindowState</key>
 	<dict>
 		<key>bundleDividerCollapsed</key>
-		<true/>
+		<false/>
 		<key>bundlePositionOfDivider</key>
-		<real>0.0</real>
+		<real>621</real>
 		<key>dividerCollapsed</key>
 		<false/>
 		<key>eventLogLevel</key>
@@ -19,7 +19,7 @@
 		<key>positionOfDivider</key>
 		<real>498</real>
 		<key>savedFrame</key>
-		<string>602 176 766 700 0 0 1440 877 </string>
+		<string>387 131 920 700 0 0 1440 877 </string>
 		<key>selectedTab</key>
 		<string>log</string>
 	</dict>
