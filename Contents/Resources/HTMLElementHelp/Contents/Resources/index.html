@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>HTMLElement Reference</title>
+		<meta name="AppleTitle" content="HTMLElement Reference" />
+
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<link href="assets/default.css" type="text/css" rel="stylesheet" media="all" />
+        <link href="assets/applescript.css" type="text/css" rel="stylesheet" media="all" />
+		<meta name="keywords" content="HTMLElement, AppleScript" />
+		<script type="text/javascript" src="assets-helpbook/run_helpscript.js"></script>
+		<script type="text/javascript" src="assets/navibar-jump.js"></script>
+        <link id="helpviewer-handler-helper" href="assets-helpbook/helpviewer-handler-helper.scpt" />
+        <script type="text/javascript" src="assets-helpbook/helpviewer-handler-enable.js"></script>
+        <link href="./" id="HelpBookRoot" />
+	</head>
+
+	<body>
+		<div id="navi-bar">
+			<div class="edit-script-link">
+				<a onclick="return runHelpScriptWithBundleRoot(this)" href="assets-helpbook/editScript.scpt">Edit Script</a>
+			</div>
+			<div class="left-contents">
+			<div class="to-root">
+				<!-- InstanceBeginEditable name="to-root" --><!-- InstanceEndEditable -->
+			</div>
+			<select onchange="navibarJump(this)">
+<option value="">
+§
+</option>
+<option value="#Constructor_Methods">
+Constructor Methods
+</option>
+<option value="#make_with">
+- make_with
+</option>
+<option value="#comment_with">
+- comment_with
+</option>
+<option value="#Appending_Child_Element_and_Contents">
+Appending Child Element and Contents
+</option>
+<option value="#push">
+- push
+</option>
+<option value="#push_element_with">
+- push_element_with
+</option>
+<option value="#push_comment_with">
+- push_comment_with
+</option>
+<option value="#Output">
+Output
+</option>
+<option value="#as_html">
+- as_html
+</option>
+<option value="#Accessor_Methods">
+Accessor Methods
+</option>
+<option value="#element_name">
+- element_name
+</option>
+<option value="#set_element_name">
+- set_element_name
+</option>
+<option value="#attribute_value">
+- attribute_value
+</option>
+<option value="#set_attribute">
+- set_attribute
+</option>
+</select>
+			</div>
+		</div>
+		<!-- InstanceBeginEditable name="prev-next-item" --><!-- InstanceEndEditable -->
+		<div id="contents">
+		<h1>HTMLElement Reference</h1>
+<ul>
+<li>Version : 1.0</li>
+<li>Author : Kurita Tetsuro <a href="mailto:scriptfactory@mac.com">scriptfactory@mac.com</a></li>
+<li>Requirements : OS X 10.9 or later</li>
+<li><a href="http://www.script-factory.net/XModules/HTMLElement/en/index.html">Home page</a> || <a href="http://www.script-factory.net/XModules/HTMLElement/changelog.html">ChangeLog</a> || <a href="https://github.com/tkurita/HTMLElement.scptd">Repository</a> </li>
+</ul>
+<p>HTMLElement is an AppleScript libraryt to build HTML with programming.</p>
+<p>This library is useful when a kind of data is converted into HTML data.</p>
+<p>The root object of HTMLElement can be made by the constructor method of <a href="pages/make_with.html">make_with</a>. First argument of <a href="pages/make_with.html">make_with</a> is name of the tag. Attributes of the tag can be specified in second argument as a list of lists. </p>
+<p>Child objects can be appended by methods of <a href="pages/push_element_with.html">push_element_with</a>, <a href="pages/push_comment_with.html">push_comment_with</a>. </p>
+<p>The contents of HTML tags can be appended by <a href="pages/push.html">push</a>.</p>
+<p>To obtain text data of HTML, <a href="pages/as_html.html">as_html</a> can be used.</p>
+<div class="sourceCode">
+<div class="scriptButton">
+    <input type="button" value="Open this script" onclick="document.location = this.src" src="applescript://com.apple.scripteditor?action=new&amp;script=use%20HTMLElement%20:%20script%20%22HTMLElement%22%0D%0Dtell%20HTMLElement%27s%20make_with(%22html%22,%20%7B%7D)%0D%09tell%20push_element_with(%22head%22,%20%7B%7D)%0D%09%09tell%20push_element_with(%22title%22,%20%7B%7D)%0D%09%09%09push(%22Welcome%20to%20HTMLElement%22)%0D%09%09end%20tell%0D%09end%20tell%0D%09tell%20push_element_with(%22body%22,%20%7B%7D)%0D%09%09tell%20push_element_with(%22p%22,%20%7B%7D)%0D%09%09%09push(%22hello%22)%0D%09%09end%20tell%0D%09%09set%20body_tag%20to%20it%0D%09end%20tell%0D%09set%20html_tag%20to%20it%0Dend%20tell%0D%0Dset%20comment_tag%20to%20HTMLElement%27s%20comment_with(%22this%20is%20comment%22,%20%7B%7D)%0Dbody_tag%27s%20push(comment_tag)%0D%0Dlog%20html_tag%27s%20as_html()%0D(*%3Chtml%3E%0D%3Chead%3E%0D%3Ctitle%3EWelcome%20to%20HTMLElement%3C/title%3E%0D%3C/head%3E%0D%3Cbody%3E%0D%3Cp%3Ehello%3C/p%3E%0D%3C!--%20this%20is%20comment%20--%3E%0D%3C/body%3E%0D%3C/html%3E*)" />
+</div><div>
+<span class="langKeyword">use</span> <span class="userDefine">HTMLElement</span><span class="normal"> : </span><span class="className">script</span><span class="normal"> &quot;HTMLElement&quot;</span>
+</div>
+<br />
+<div>
+<span class="langKeyword">tell</span> <span class="userDefine">HTMLElement's</span> <span class="userDefine">make_with</span><span class="normal">(&quot;html&quot;, {})</span>
+</div>
+<div style="text-indent:4ex;">
+<span class="langKeyword">tell</span> <span class="userDefine">push_element_with</span><span class="normal">(&quot;head&quot;, {})</span>
+</div>
+<div style="text-indent:8ex;">
+<span class="langKeyword">tell</span> <span class="userDefine">push_element_with</span><span class="normal">(&quot;title&quot;, {})</span>
+</div>
+<div style="text-indent:12ex;">
+<span class="userDefine">push</span><span class="normal">(&quot;Welcome to HTMLElement&quot;)</span>
+</div>
+<div style="text-indent:8ex;">
+<span class="langKeyword">end</span> <span class="langKeyword">tell</span>
+</div>
+<div style="text-indent:4ex;">
+<span class="langKeyword">end</span> <span class="langKeyword">tell</span>
+</div>
+<div style="text-indent:4ex;">
+<span class="langKeyword">tell</span> <span class="userDefine">push_element_with</span><span class="normal">(&quot;body&quot;, {})</span>
+</div>
+<div style="text-indent:8ex;">
+<span class="langKeyword">tell</span> <span class="userDefine">push_element_with</span><span class="normal">(&quot;p&quot;, {})</span>
+</div>
+<div style="text-indent:12ex;">
+<span class="userDefine">push</span><span class="normal">(&quot;hello&quot;)</span>
+</div>
+<div style="text-indent:8ex;">
+<span class="langKeyword">end</span> <span class="langKeyword">tell</span>
+</div>
+<div style="text-indent:8ex;">
+<span class="langKeyword">set</span> <span class="userDefine">body_tag</span> <span class="langKeyword">to</span> <span class="langKeyword">it</span>
+</div>
+<div style="text-indent:4ex;">
+<span class="langKeyword">end</span> <span class="langKeyword">tell</span>
+</div>
+<div style="text-indent:4ex;">
+<span class="langKeyword">set</span> <span class="userDefine">html_tag</span> <span class="langKeyword">to</span> <span class="langKeyword">it</span>
+</div>
+<div>
+<span class="langKeyword">end</span> <span class="langKeyword">tell</span>
+</div>
+<br />
+<div>
+<span class="langKeyword">set</span> <span class="userDefine">comment_tag</span> <span class="langKeyword">to</span> <span class="userDefine">HTMLElement's</span> <span class="userDefine">comment_with</span><span class="normal">(&quot;this is comment&quot;, {})</span>
+</div>
+<div>
+<span class="userDefine">body_tag's</span> <span class="userDefine">push</span><span class="normal">(</span><span class="userDefine">comment_tag</span><span class="normal">)</span>
+</div>
+<br />
+<div>
+<span class="commandName">log</span> <span class="userDefine">html_tag's</span> <span class="userDefine">as_html</span><span class="normal">()</span>
+</div>
+<div>
+<span class="comment">(*&lt;html&gt;</span>
+</div>
+<div>
+<span class="comment">&lt;head&gt;</span>
+</div>
+<div>
+<span class="comment">&lt;title&gt;Welcome to HTMLElement&lt;/title&gt;</span>
+</div>
+<div>
+<span class="comment">&lt;/head&gt;</span>
+</div>
+<div>
+<span class="comment">&lt;body&gt;</span>
+</div>
+<div>
+<span class="comment">&lt;p&gt;hello&lt;/p&gt;</span>
+</div>
+<div>
+<span class="comment">&lt;!-- this is comment --&gt;</span>
+</div>
+<div>
+<span class="comment">&lt;/body&gt;</span>
+</div>
+<div>
+<span class="comment">&lt;/html&gt;*)</span>
+</div>
+</div>
+<h2 id="Constructor_Methods">Constructor Methods</h2>
+<h3 id="make_with"><a href="pages/make_with.html">make_with</a></h3>
+<p>Make a new HTMLElement instance</p>
+<h3 id="comment_with"><a href="pages/comment_with.html">comment_with</a></h3>
+<p>Make a new HTMLElement instance for a comment tag</p>
+<h2 id="Appending_Child_Element_and_Contents">Appending Child Element and Contents</h2>
+<h3 id="push"><a href="pages/push.html">push</a></h3>
+<p>Append text into the contents of the tag.</p>
+<h3 id="push_element_with"><a href="pages/push_element_with.html">push_element_with</a></h3>
+<p>Append a new HTMLElement instance as a child node.</p>
+<h3 id="push_comment_with"><a href="pages/push_comment_with.html">push_comment_with</a></h3>
+<p>Append a new comment instance as a child node.</p>
+<h2 id="Output">Output</h2>
+<h3 id="as_html"><a href="pages/as_html.html">as_html</a></h3>
+<p>Return HTML text data.</p>
+<h2 id="Accessor_Methods">Accessor Methods</h2>
+<h3 id="element_name"><a href="pages/element_name.html">element_name</a></h3>
+<p>Retun element name.</p>
+<h3 id="set_element_name"><a href="pages/set_element_name.html">set_element_name</a></h3>
+<p>Set element name.</p>
+<h3 id="attribute_value"><a href="pages/attribute_value.html">attribute_value</a></h3>
+<p>Return atttibute value of specified name.</p>
+<h3 id="set_attribute"><a href="pages/set_attribute.html">set_attribute</a></h3>
+<p>Set attibute of the tag.</p>
+		</div>
+		<!-- InstanceBeginEditable name="prev-next-item" --><!-- InstanceEndEditable -->
+	</body>
+
+</html>
